@@ -18,3 +18,41 @@ namespace Company.Function
         }
     }
 }
+/*
+
+in portal below needs to be writte in trigger run.csx
+
+-------------------------------------------------------------------------
+
+using System;
+
+public static void Run(string myQueueItem, ICollector<string> outputQueueItem, ILogger log)
+{
+    outputQueueItem.Add(myQueueItem);
+    log.LogInformation($"C# Queue trigger function processed: {myQueueItem}");
+}
+------------------------------------------------------------------------------
+
+function.json has below content
+-----------------------------------------------------------------------------
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "queueName": "myqueue-out",
+      "connection": "AzureWebJobsStorage",
+      "direction": "in",
+      "type": "queueTrigger"
+    },
+    {
+      "name": "outputQueueItem",
+      "direction": "out",
+      "type": "queue",
+      "connection": "AzureWebJobsStorage",
+      "queueName": "myqueue"
+    }
+  ]
+}
+----------------------------------------------------------------------------
+
+*/

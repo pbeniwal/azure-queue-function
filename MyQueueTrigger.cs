@@ -20,7 +20,7 @@ namespace Company.Function
 }
 /*
 
-in portal below needs to be writte in trigger run.csx
+in portal below needs to be written in trigger run.csx
 
 -------------------------------------------------------------------------
 
